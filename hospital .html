@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital 24x7 - Center for Healthcare</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+
     <style>
-        
         :root {
-            --primary-color: #007bff; 
-            --secondary-color: #28a745; 
-            --emergency-color: #dc3545; 
+            --primary-color: #007bff;
+            --secondary-color: #28a745;
+            --emergency-color: #dc3545;
             --background-color: #f8f9fa;
             --card-background: #ffffff;
             --text-color: #343a40;
@@ -20,7 +20,7 @@
             --border-radius: 10px;
         }
 
-        
+
         @media (prefers-color-scheme: dark) {
             :root {
                 --background-color: #1a1a2e;
@@ -30,7 +30,7 @@
             }
         }
 
-        
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -54,14 +54,14 @@
             max-width: 1200px;
             margin: 40px auto;
         }
-        
+
         .section-title {
             text-align: center;
             font-size: 2.2rem;
             margin-bottom: 40px;
             color: var(--primary-color);
         }
-        
+
         .btn {
             padding: 12px 25px;
             border-radius: 50px;
@@ -83,7 +83,7 @@
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
         }
 
-        
+
         header {
             background-color: var(--card-background);
             box-shadow: var(--shadow-subtle);
@@ -92,13 +92,13 @@
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .logo {
             font-size: 1.6rem;
             font-weight: 700;
             color: var(--primary-color);
         }
-        
+
         nav a {
             margin-left: 20px;
             font-weight: 500;
@@ -111,7 +111,7 @@
             border-bottom: 2px solid var(--primary-color);
         }
 
-        
+
         .emergency-cta {
             background-color: var(--emergency-color);
             color: white;
@@ -120,42 +120,42 @@
             font-weight: bold;
             transition: background-color 0.3s;
         }
-        
-        .emergency-hover             {
+
+        .emergency-hover {
             background-color: #c82333;
-            
-            box-shadow: 0 0 0 5px rgba(220, 53, 69, 0.4); 
+
+            box-shadow: 0 0 0 5px rgba(220, 53, 69, 0.4);
         }
 
-        
-        
-    
-       .hero{
-  height:520px;
-  background:
-  linear-gradient(rgba(27, 3, 45, 0.55), rgba(0,0,0,0.65)),
-  url("https://etimg.etb2bimg.com/photo/91574709.cms");
-  background-size:cover;
-  background-position:center;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  color:white;
-}
 
-.hero h1{
-  font-size:3rem;
-  margin-bottom:15px;
-  text-shadow:2px 2px 6px rgba(0,0,0,0.6);
-}
 
-.hero p{
-  font-size:1.2rem;
-  margin-bottom:25px;
-}
-        
+
+        .hero {
+            height: 520px;
+            background:
+                linear-gradient(rgba(27, 3, 45, 0.55), rgba(0, 0, 0, 0.65)),
+                url("https://etimg.etb2bimg.com/photo/91574709.cms");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+        }
+
         .department-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -171,7 +171,7 @@
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        
+
         .dept-card:hover {
             transform: translateY(-7px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
@@ -182,30 +182,30 @@
             color: var(--secondary-color);
             margin-bottom: 15px;
         }
-        
+
         .dept-card h4 {
             font-size: 1.25rem;
             margin-bottom: 10px;
         }
-        
-        
+
+
         .doctors-flex {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
             gap: 30px;
         }
-        
+
         .doctor-card {
             background-color: var(--card-background);
-            width: 350px; 
+            width: 350px;
             border-radius: var(--border-radius);
             overflow: hidden;
             box-shadow: var(--shadow-subtle);
             text-align: center;
             transition: box-shadow 0.3s;
         }
-        
+
         .doctor-card:hover {
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
@@ -222,7 +222,7 @@
         .doctor-info {
             padding: 20px;
         }
-        
+
         .doctor-info h4 {
             font-size: 1.3rem;
             color: var(--primary-color);
@@ -233,18 +233,18 @@
             color: var(--secondary-color);
             font-weight: 500;
         }
-        
-        
+
+
         .appointment-section {
             background-color: var(--primary-color);
             padding: 60px 5%;
             color: white;
         }
-        
+
         .appointment-section .section-title {
             color: white;
         }
-        
+
         .appointment-form {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -259,7 +259,7 @@
             font-weight: 600;
         }
 
-        .form-group input, 
+        .form-group input,
         .form-group select {
             width: 100%;
             padding: 12px;
@@ -268,22 +268,20 @@
             font-size: 1rem;
             color: var(--text-color);
         }
-        
-        
-        .form-group input:focus, 
-        .form-group select:focus {
-            outline: 3px solid var
 
-            box-shadow: 0 0 5px var
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: 3px solid var box-shadow: 0 0 5px var
         }
 
         .full-width {
-            grid-column: 1 / -1; 
+            grid-column: 1 / -1;
             text-align: center;
             margin-top: 10px;
         }
 
-        
+
         footer {
             background-color: #343a40;
             color: #adb5bd;
@@ -298,13 +296,13 @@
             flex-basis: 25%;
             min-width: 200px;
         }
-        
+
         footer h5 {
             color: white;
             margin-bottom: 15px;
             font-size: 1.1rem;
         }
-        
+
         footer a {
             display: block;
             color: #adb5bd;
@@ -315,27 +313,96 @@
         footer a:hover {
             color: var(--primary-color);
         }
-        
-        
+
+
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
             }
+
             nav {
                 margin-top: 10px;
             }
+
             .hero h1 {
                 font-size: 2.5rem;
             }
+
             .doctor-card {
                 width: 100%;
             }
+
             .footer-col {
                 flex-basis: 45%;
             }
         }
+
+        /* ===== Extra Sections ===== */
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .info-card {
+            background: var(--card-background);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-subtle);
+            text-align: center;
+        }
+
+        .info-card i {
+            font-size: 2.3rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat-box {
+            background: var(--card-background);
+            padding: 30px;
+            width: 220px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .stat-box h3 {
+            font-size: 2rem;
+            color: var(--secondary-color);
+        }
+
+        .testimonial {
+            background: var(--card-background);
+            padding: 25px;
+            border-left: 5px solid var(--primary-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .faq details {
+            background: var(--card-background);
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .faq summary {
+            font-weight: bold;
+            cursor: pointer;
+        }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -347,6 +414,13 @@
             <a href="#departments">Departments</a>
             <a href="#doctors">Our Doctors</a>
             <a href="#">Patient Dashboard</a>
+            <a href="#facilities">Facilities</a>
+            <a href="#services">Services</a>
+            <a href="#why-us">Why Us</a>
+            <a href="#emergency">Emergency</a>
+            <a href="#testimonials">Reviews</a>
+            <a href="#faq">FAQ</a>
+
             <a href="#" class="emergency-cta"><i class="fas fa-phone-alt"></i> Emergency: 108</a>
         </nav>
     </header>
@@ -387,43 +461,181 @@
             </div>
         </section>
 
-        
-<section class="container" id="doctors">
-  <h2 class="section-title">Meet Our Leading Doctors</h2>
-  <div class="doctors-flex">
 
-    <!-- Doctor 1 -->
-    <div class="doctor-card">
-      <div class="doctor-img" style="background-image: url('https://as1.ftcdn.net/v2/jpg/00/38/55/84/1000_F_38558476_N47gIuD2NccvKwObgq9OhJFFX0UPhoEv.jpg');"></div>
-      <div class="doctor-info">
-        <h4>Dr. Priya Sharma</h4>
-        <p>Chief Cardiologist</p>
-        <p style="font-size: 0.9em; margin-top: 10px;">Availability: Mon, Wed, Fri (9 AM - 4 PM)</p>
-      </div>
-    </div>
+        <section class="container" id="doctors">
+            <h2 class="section-title">Meet Our Leading Doctors</h2>
+            <div class="doctors-flex">
 
-    <!-- Doctor 2 -->
-    <div class="doctor-card">
-      <div class="doctor-img" style="background-image: url('https://img.freepik.com/premium-photo/portrait-indian-doctor-indian-doctor-smiling_890100-1265.jpg');"></div>
-      <div class="doctor-info">
-        <h4>Dr. Rajesh Kumar</h4>
-        <p>Senior Neurologist</p>
-        <p style="font-size: 0.9em; margin-top: 10px;">Availability: Tue, Thu (10 AM - 6 PM)</p>
-      </div>
-    </div>
+                <!-- Doctor 1 -->
+                <div class="doctor-card">
+                    <div class="doctor-img"
+                        style="background-image: url('https://as1.ftcdn.net/v2/jpg/00/38/55/84/1000_F_38558476_N47gIuD2NccvKwObgq9OhJFFX0UPhoEv.jpg');">
+                    </div>
+                    <div class="doctor-info">
+                        <h4>Dr. Priya Sharma</h4>
+                        <p>Chief Cardiologist</p>
+                        <p style="font-size: 0.9em; margin-top: 10px;">Availability: Mon, Wed, Fri (9 AM - 4 PM)</p>
+                    </div>
+                </div>
 
-    <!-- Doctor 3 -->
-    <div class="doctor-card">
-      <div class="doctor-img" style="background-image: url('https://img.freepik.com/premium-photo/indian-female-doctor_714173-1858.jpg');"></div>
-      <div class="doctor-info">
-        <h4>Dr. Anjali Verma</h4>
-        <p>Orthopedic Surgeon</p>
-        <p style="font-size: 0.9em; margin-top: 10px;">Availability: Daily (Emergency Only)</p>
-      </div>
-    </div>
+                <!-- Doctor 2 -->
+                <div class="doctor-card">
+                    <div class="doctor-img"
+                        style="background-image: url('https://img.freepik.com/premium-photo/portrait-indian-doctor-indian-doctor-smiling_890100-1265.jpg');">
+                    </div>
+                    <div class="doctor-info">
+                        <h4>Dr. Rajesh Kumar</h4>
+                        <p>Senior Neurologist</p>
+                        <p style="font-size: 0.9em; margin-top: 10px;">Availability: Tue, Thu (10 AM - 6 PM)</p>
+                    </div>
+                </div>
 
-  </div>
-</section>
+                <!-- Doctor 3 -->
+                <div class="doctor-card">
+                    <div class="doctor-img"
+                        style="background-image: url('https://img.freepik.com/premium-photo/indian-female-doctor_714173-1858.jpg');">
+                    </div>
+                    <div class="doctor-info">
+                        <h4>Dr. Anjali Verma</h4>
+                        <p>Orthopedic Surgeon</p>
+                        <p style="font-size: 0.9em; margin-top: 10px;">Availability: Daily (Emergency Only)</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="container" id="facilities">
+            <h2 class="section-title">Our Facilities</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <i class="fas fa-ambulance"></i>
+                    <h4>24x7 Ambulance</h4>
+                    <p>Fully equipped emergency ambulances available round the clock.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-procedures"></i>
+                    <h4>ICU & Ventilator</h4>
+                    <p>Advanced ICU with trained critical care specialists.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-x-ray"></i>
+                    <h4>Modern Diagnostics</h4>
+                    <p>CT Scan, MRI, X-Ray & pathology under one roof.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" id="services">
+            <h2 class="section-title">Patient Services</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <i class="fas fa-file-medical"></i>
+                    <h4>Online Reports</h4>
+                    <p>Patients can download lab reports online.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-ticket-alt"></i>
+                    <h4>Token System</h4>
+                    <p>Queue management system to reduce waiting time.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-bed"></i>
+                    <h4>Bed Availability</h4>
+                    <p>Real-time hospital bed status for patients.</p>
+                </div>
+            </div>
+        </section>
+
+ <section class="container">
+            <h2 class="section-title">Our Achievements</h2>
+            <div class="stats">
+                <div class="stat-box">
+                    <h3>50,000+</h3>
+                    <p>Patients Treated</p>
+                </div>
+                <div class="stat-box">
+                    <h3>120+</h3>
+                    <p>Expert Doctors</p>
+                </div>
+                <div class="stat-box">
+                    <h3>15+</h3>
+                    <p>Years of Service</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" id="emergency">
+            <h2 class="section-title">Emergency Process</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <i class="fas fa-phone"></i>
+                    <h4>Call 108</h4>
+                    <p>Immediate emergency call support.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-hospital"></i>
+                    <h4>Rapid Admission</h4>
+                    <p>Fast-track emergency admission.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-stethoscope"></i>
+                    <h4>Critical Care</h4>
+                    <p>Specialist doctors attend immediately.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" id="why-us">
+            <h2 class="section-title">Why Choose Hospital 24x7?</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <i class="fas fa-user-md"></i>
+                    <h4>Experienced Doctors</h4>
+                    <p>Highly qualified doctors with years of experience.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-clock"></i>
+                    <h4>24x7 Support</h4>
+                    <p>Emergency and medical support anytime.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-heart"></i>
+                    <h4>Patient First</h4>
+                    <p>We prioritize patient safety and care.</p>
+                </div>
+            </div>
+        </section>
+
+
+         <section class="container" id="testimonials">
+            <h2 class="section-title">Patient Reviews</h2>
+            <div class="testimonial">
+                <p>"Excellent treatment and very caring staff."</p>
+                <strong>– jyoti kushwaha</strong>
+                <p>"Doctors and staff were caring and professional. The hospital was clean and well-organized. Highly recommend!".</p>
+                <strong>– anshu Verma</strong>
+                <p>"Quick check-up and friendly staff. No long waits. Very satisfied with the service!"</p>
+                <strong>– kishan tyagi</strong>
+                <p>"Calm environment and transparent billing. The team made my visit comfortable and easy."</p>
+                <strong>– sanjeet maurya</strong>
+            </div>
+        </section>
+
+
+        <section class="container faq" id="faq">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+
+            <details>
+                <summary>Is emergency service available 24x7?</summary>
+                <p>Yes, emergency services are available round the clock.</p>
+            </details>
+
+            <details>
+                <summary>Can I book appointment online?</summary>
+                <p>Yes, appointments can be booked via our website.</p>
+            </details>
+        </section>
+
 
 
         <section class="appointment-section" id="appointment">
@@ -463,21 +675,26 @@
                     <label for="time">Preferred Time</label>
                     <input type="time" id="time">
                 </div>
-                
+
                 <div class="full-width">
-                    <button type="submit" class="btn btn-primary" style="background-color: var(--secondary-color); margin-top: 20px;">
+                    <button type="submit" class="btn btn-primary"
+                        style="background-color: var(--secondary-color); margin-top: 20px;">
                         Confirm Booking Mockup
                     </button>
-                    <p style="margin-top: 15px; font-size: 0.9em;">(Note: This is a static mockup. Form submission is disabled.)</p>
+                    <p style="margin-top: 15px; font-size: 0.9em;">(Note: This is a static mockup. Form submission is
+                        disabled.)</p>
                 </div>
             </form>
         </section>
+
+
     </main>
 
     <footer>
         <div class="footer-col">
             <h5>About Us</h5>
-            <p style="font-size: 0.9em;">Hospital 24x7 is dedicated to providing world-class medical services with compassion and integrity.</p>
+            <p style="font-size: 0.9em;">Hospital 24x7 is dedicated to providing world-class medical services with
+                compassion and integrity.</p>
         </div>
         <div class="footer-col">
             <h5>Quick Links</h5>
@@ -501,4 +718,5 @@
     </footer>
 
 </body>
+
 </html>
